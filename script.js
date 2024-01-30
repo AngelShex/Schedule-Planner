@@ -22,6 +22,7 @@ $(function () {
     // current hour in 24-hour time?
     //
 var currentHour = dayjs().hour();
+var pwdGen = Math.random(arr * leng);
 
 
 
