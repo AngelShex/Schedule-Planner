@@ -22,7 +22,72 @@ $(function () {
     // current hour in 24-hour time?
     //
 var currentHour = dayjs().hour();
-var pwdGen = Math.random(arr * leng);
+var myDay = [
+{
+    id: "hour-9",
+    hour: "09",
+    time: "09",
+    meridiem: "am",
+    reminder: ""
+},
+{
+    id: "hour-10",
+    hour: "10",
+    time: "10",
+    meridiem: "am",
+    reminder: ""
+},
+{
+    id: "hour-11",
+    hour: "11",
+    time: "11",
+    meridiem: "am",
+    reminder: ""
+},
+{
+    id: "hour-12",
+    hour: "12",
+    time: "12",
+    meridiem: "pm",
+    reminder: ""
+},
+{
+    id: "hour-1",
+    hour: "01",
+    time: "13",
+    meridiem: "pm",
+    reminder: ""
+},
+{
+    id: "hour-2",
+    hour: "02",
+    time: "14",
+    meridiem: "pm",
+    reminder: ""
+},
+{
+    id: "hour-3",
+    hour: "03",
+    time: "15",
+    meridiem: "pm",
+    reminder: ""
+},
+{
+    id: "hour-4",
+    hour: "04",
+    time: "16",
+    meridiem: "pm",
+    reminder: ""
+},
+{
+    id: "hour-5",
+    hour: "05",
+    time: "17",
+    meridiem: "pm",
+    reminder: ""
+},
+]
+
 
 
 
