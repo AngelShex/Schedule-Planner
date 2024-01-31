@@ -38,7 +38,11 @@
       });
     }
 
-   // The function below will refresh the color of each time block based on whether it's in the past(grey), present(red), or future(green) relative to the current time. 
+     // TODO: Add code to apply the past, present, or future class to each time
+    // block by comparing the id to the current hour. HINTS: How can the id
+    // attribute of each time-block be used to conditionally add or remove the
+    // past, present, and future classes? How can Day.js be used to get the
+    // current hour in 24-hour time?
     function refreshColor() {
       $('.time-block').each(function() {
         const blockHour = parseInt(this.id);
@@ -53,19 +57,14 @@
     }
 
 
-        // TODO: Add code to apply the past, present, or future class to each time
-    // block by comparing the id to the current hour. HINTS: How can the id
-    // attribute of each time-block be used to conditionally add or remove the
-    // past, present, and future classes? How can Day.js be used to get the
-    // current hour in 24-hour time?
+        // sets data in local storage to be viewed
     $('.time-block').each(function() {
       const key = $(this).attr('id');
       const value = localStorage.getItem(key);
       $(this).children('.description').val(value);
     });
   
-    // Please note: this is my favourtie part of the module - I absolutly love the display of current date and time especially 
-    // since the the time referesed every second - you can find this among the header of the page!
+     // TODO: Add code to display the current date in the header of the page.
     function updateTime() {
       const dateElement = $('#date');
       const timeElement = $('#time');
@@ -78,8 +77,7 @@
     hourlyColor();
     textEntry();                
     refreshColor();
-    // This will update the time once per second for the current time once per second using setInterval() 
-    // giving my beautiful diplay header a live time hours, minues and seconds coutner
+    // This will update the time once per second for the current time once per second
     setInterval(updateTime, 1000);
   });
   
