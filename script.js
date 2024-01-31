@@ -9,8 +9,12 @@
 
     // Get the current hour of the day using the dayjs
     const currentHour = dayjs().format('H');
-    
-  // The function below changes the color of each time block based on whether it's in the "past, present, or future" relative to the current hour.
+
+    // TODO: Add code to apply the past, present, or future class to each time
+    // block by comparing the id to the current hour. HINTS: How can the id
+    // attribute of each time-block be used to conditionally add or remove the
+    // past, present, and future classes? How can Day.js be used to get the
+    // current hour in 24-hour time?
     function hourlyColor() {
       $('.time-block').each(function() {
         const blockHour = parseInt(this.id);
