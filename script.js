@@ -1,12 +1,15 @@
- // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-  // the code isn't run until the browser has finished rendering all the elements
-  // in the html.
+ // Saves Entry to the local storage
   const localeSettings = {};
   dayjs.locale(localeSettings);
-  // Wait until the DOM is fully loaded before executing the code inside the function.
+
+   // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
+  // the code isn't run until the browser has finished rendering all the elements
+  // in the html.
   $(function () {
+
     // Get the current hour of the day using the dayjs
     const currentHour = dayjs().format('H');
+    
   // The function below changes the color of each time block based on whether it's in the "past, present, or future" relative to the current hour.
     function hourlyColor() {
       $('.time-block').each(function() {
