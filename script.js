@@ -23,7 +23,13 @@
         $(this).toggleClass('future', blockHour > currentHour);
       });
     }
-  // The  function below will save the user's input in a textarea to localStorage - only when the corresponding save button has been clicked.
+    
+      // TODO: Add a listener for click events on the save button. This code should
+    // use the id in the containing time-block as a key to save the user input in
+    // local storage. HINT: What does `this` reference in the click listener
+    // function? How can DOM traversal be used to get the "hour-x" id of the
+    // time-block containing the button that was clicked? How might the id be
+    // useful when saving the description in local storage?
     function textEntry() {
       $('.saveBtn').on('click', function() {
         const key = $(this).parent().attr('id');
@@ -31,6 +37,7 @@
         localStorage.setItem(key, value);
       });
     }
+
    // The function below will refresh the color of each time block based on whether it's in the past(grey), present(red), or future(green) relative to the current time. 
     function refreshColor() {
       $('.time-block').each(function() {
